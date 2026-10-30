@@ -255,7 +255,7 @@ a {
   margin: clamp(2.5rem, 5vw, 4rem) 0 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
   gap: clamp(1.5rem, 3vw, 2.75rem);
 }
 
@@ -267,7 +267,7 @@ a {
 .plate__image {
   display: block;
   width: 100%;
-  height: 220px;
+  height: auto;
   background: var(--slate);
 }
 
@@ -276,6 +276,7 @@ a {
   padding-top: 0.75rem;
   border-top: 1px solid color-mix(in srgb, var(--brass) 45%, transparent);
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   justify-content: space-between;
   gap: 1rem;
