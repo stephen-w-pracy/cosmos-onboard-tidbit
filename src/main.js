@@ -39,6 +39,8 @@ function announce(message) {
 }
 
 form.addEventListener('submit', (event) => {
+  event.preventDefault()
+
   const address = emailField.value.trim()
   if (!address) {
     return
